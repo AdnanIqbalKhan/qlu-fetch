@@ -1,10 +1,10 @@
-# q-fetch
+# fetch
 
 
 
 ## Getting started
 
-    import fetch from 'q-fetch'
+    import fetch from '@adnaniqbal/fetch'
 
     const res = await fetch('https://randomuser.me/api', {}, 3)
  

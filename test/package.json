@@ -10,6 +10,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "q-fetch": "file:.."
+    "@adnaniqbal/fetch": "file:.."
   }
 }

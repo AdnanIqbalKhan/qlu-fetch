@@ -1,4 +1,4 @@
-import fetch from 'q-fetch'
+import fetch from '@adnaniqbal/fetch'
 
 async function main() {
 
