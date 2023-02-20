@@ -1,13 +1,18 @@
-# qlu-fetch
+# q-fetch
 
 
 
 ## Getting started
 
-    import { QluFetch } from 'qlu-fetch'
+    import fetch from 'q-fetch'
 
-    const res = await QluFetch('https://randomuser.me/api', {}, 3)
+    const res = await fetch('https://randomuser.me/api', {}, 3)
  
 
- ### functions
-    const QluFetch = async function (url: string, options = {}, retries = 3): Promise<any>
+ ### functions signature
+      fetch(url: string, options: FetchOpts): Promise<any> 
+
+      interface FetchOpts extends RequestInit {
+         retry: number,
+         pause: Array<number> | number
+      }

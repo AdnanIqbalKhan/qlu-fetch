@@ -1,8 +1,13 @@
-import fetch from 'node-fetch'
+import nodeFetch, { RequestInit } from 'node-fetch';
 
+interface FetchOpts extends RequestInit {
+    retry: number,
+    pause: Array<number> | number
+}
 
-export const QluFetch = async function (url: string, options = {}, retries = 3, delay: Array<number> | number = 1): Promise<any> {
-    return fetch(url, options)
+export default async function fetch(url: string, options: FetchOpts): Promise<any> {
+    const { retry, pause, ...opts } = options
+    return nodeFetch(url, opts)
         .then(res => {
             if (res.ok) {
                 return res.json()
@@ -10,16 +15,16 @@ export const QluFetch = async function (url: string, options = {}, retries = 3, 
             throw new Error(`ERROR: ${res.status}`)
         })
         .catch(error => {
-            if (retries > 0) {
+            if (retry > 0) {
                 return new Promise((resolve) => {
-                    const sleep = Array.isArray(delay)
-                        ? delay.length > 0
-                            ? delay.shift()
+                    const sleep = Array.isArray(pause)
+                        ? pause.length > 0
+                            ? pause.shift()
                             : 1
-                        : delay
+                        : pause
 
                     setTimeout(() => {
-                        resolve(QluFetch(url, options, retries - 1));
+                        resolve(fetch(url, { ...opts, retry, pause }));
                     }, sleep);
                 });
             }
