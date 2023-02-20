@@ -6,13 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [
-    "fetch",
-    "node-fetch",
-    "retry",
-    "api"
-  ],
-  "author": "adnaniqbal",
   "license": "ISC",
   "type": "module",
   "dependencies": {

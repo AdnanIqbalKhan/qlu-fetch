@@ -16,7 +16,13 @@
     "type": "git",
     "url": "git+https://gitlab.com/adnaniqbalkhan/qlu-fetch.git"
   },
-  "author": "",
+  "keywords": [
+    "fetch",
+    "node-fetch",
+    "retry",
+    "api"
+  ],
+  "author": "adnaniqbal",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/adnaniqbalkhan/qlu-fetch/issues"
