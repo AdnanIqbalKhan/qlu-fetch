@@ -12,7 +12,7 @@
     "retry",
     "api"
   ],
-  "author": "",
+  "author": "adnaniqbal",
   "license": "ISC",
   "type": "module",
   "dependencies": {
