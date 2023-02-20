@@ -4,9 +4,9 @@
 
 ## Getting started
 
-    import fetch from '@adnaniqbal/fetch'
+      import fetch from '@adnaniqbal/fetch'
 
-    const res = await fetch('https://randomuser.me/api', {}, 3)
+      let res = await fetch('https://randomuser.me/api', { method: 'GET', retry: 3, pause: 1000 })
  
 
  ### functions signature
