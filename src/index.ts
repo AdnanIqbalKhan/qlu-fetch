@@ -11,5 +11,10 @@ export const QluFetch = async function (url: string, options = {}, retries = 3):
             }
             throw new Error(`ERROR: ${res.status}`)
         })
-        .catch(error => console.error(error.message))
+        .catch(error => {
+            if (retries > 0) {
+                return QluFetch(url, options, retries - 1)
+            }
+            console.error(error.message)
+        })
 }
