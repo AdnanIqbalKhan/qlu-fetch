@@ -1,3 +1,4 @@
-import { printMsg } from 'qlu-fetch'
+import { QluFetch } from 'qlu-fetch'
 
-printMsg()
+const res = await QluFetch('https://randomuser.me/api1', {}, 3)
+console.log("TTTT", res) // Parsed json response from the api

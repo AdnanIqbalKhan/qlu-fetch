@@ -4,6 +4,7 @@
   "description": "",
   "main": "./lib/cjs/index.js",
   "types": "./lib/cjs/types/index.d.ts",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf ./lib",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
@@ -38,5 +39,8 @@
   },
   "devDependencies": {
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.0"
   }
 }
