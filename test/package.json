@@ -8,6 +8,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@adnaniqbal/fetch": "file:~/Desktop/Qlu/q-fetch/dist/adnaniqbal-fetch-1.0.4.tgz"
+    "@adnaniqbal/fetch": "file:~/Desktop/Qlu/q-fetch/adnaniqbal-fetch-1.0.7.tgz"
   }
 }

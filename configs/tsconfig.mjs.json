@@ -6,8 +6,8 @@
       "DOM"
     ],
     "target": "ES2022",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "outDir": "../dist/cjs",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "../dist/mjs"
   }
 }
