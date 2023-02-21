@@ -7,8 +7,7 @@
     "start": "rm -rf node_modules && npm i && node index.js"
   },
   "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "@adnaniqbal/fetch": "file: ../."
+    "@adnaniqbal/fetch": "file:~/Desktop/Qlu/q-fetch/dist/adnaniqbal-fetch-1.0.4.tgz"
   }
 }

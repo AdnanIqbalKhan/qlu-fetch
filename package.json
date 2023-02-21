@@ -2,15 +2,13 @@
   "name": "@adnaniqbal/fetch",
   "version": "1.0.4",
   "description": "A fetch wrapper with retries",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/cjs/index.cjs",
   "types": "./dist/cjs/types/index.d.ts",
-  "type": "module",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs && npm pack --pack-destination dist",
     "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs",
-    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
-    "prepack": "npm run build"
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json && mv dist/cjs/index.js dist/cjs/index.cjs"
   },
   "repository": {
     "type": "git",
@@ -44,6 +42,7 @@
     }
   },
   "devDependencies": {
+    "@types/node": "^18.14.0",
     "typescript": "^4.9.5"
   },
   "dependencies": {

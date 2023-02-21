@@ -1,4 +1,5 @@
-import fetch from '@adnaniqbal/fetch'
+const fetch = require('@adnaniqbal/fetch')
+// import fetch from '@adnaniqbal/fetch'
 
 async function main() {
 
