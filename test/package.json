@@ -9,6 +9,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@adnaniqbal/fetch": "file:.."
+    "@adnaniqbal/fetch": "file: ../."
   }
 }

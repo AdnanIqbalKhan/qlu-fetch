@@ -6,7 +6,7 @@ interface FetchOpts extends RequestInit {
 }
 
 export default async function fetch(url: string, options: FetchOpts): Promise<any> {
-    const { retry, pause, ...opts } = options
+    const { retry = 3, pause = 1000, ...opts } = options
     return nodeFetch(url, opts)
         .then(res => {
             if (res.ok) {

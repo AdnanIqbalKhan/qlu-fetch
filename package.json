@@ -1,7 +1,7 @@
 {
   "name": "@adnaniqbal/fetch",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "A fetch wrapper with retries",
   "main": "./dist/cjs/index.js",
   "types": "./dist/cjs/types/index.d.ts",
   "type": "module",
