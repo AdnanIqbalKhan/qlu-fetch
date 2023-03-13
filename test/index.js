@@ -1,11 +1,9 @@
-const fetch = require('@adnaniqbal/fetch')
-// import fetch from '@adnaniqbal/fetch'
+const fetch = require('qlu-fetch')
 
 async function main() {
 
-    // const res = await QluFetch('https://randomuser.me/api1', {}, 3)
-    let res = await fetch('https://randomuser.me/api', { method: 'GET', retry: 3, pause: 1000 })
-    console.log("TTTT", res) // Parsed json response from the api
+    let res = await fetch('https://randomuser.me/api', { method: 'GET', retry: 3, pause: [1000, 2000, 3000] })
+    console.log("OUTPUT:", res)
 
 }
 
