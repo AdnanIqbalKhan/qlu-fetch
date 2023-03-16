@@ -4,10 +4,8 @@
   "description": "A fetch wrapper with retries",
   "type": "commonjs",
   "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "npm run clean && cp ./src/index.js dist/cjs/index.cjs && ./fixup && npm pack --pack-destination dist",
-    "build:mjs": "tsc -p ./configs/tsconfig.mjs.json && mv dist/mjs/index.js dist/mjs/index.mjs",
-    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json && mv dist/cjs/index.js dist/cjs/index.cjs"
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm pack --pack-destination lib"
   },
   "repository": {
     "type": "git",

@@ -16,7 +16,7 @@
       let res = await fetch('https://randomuser.me/api', { 
          method: 'GET',
          retry: 3,
-         pause: [ 1000, 2000 ] 
+         pause: [ 1000, 2000, 3000 ] 
       })
 
 ## Options allowed in addition to node-fetch options
@@ -24,13 +24,20 @@
    count of retires you want
 - `pause` : Number | Array<Number> \
    Time to dealy between two consecutive retries
-   in case of Array<Number> `retry`  must be equal to array.length - 1   
+   in case of Array<Number> `retry`  must be equal to array.length 
+-  `timeout`: Number \
+   Abort all requests after timeout
+-  `simultaneous`: Boolean \
+   If true retires run simultaneously and return first response
  
  ### Functions Signature
-      import { RequestInit } from 'node-fetch'
-      fetch(url: string, options: FetchOpts): Promise<any> 
+      import { RequestInfo, RequestInit } from "node-fetch"
 
-      interface FetchOpts extends RequestInit {
-         retry: number,
-         pause: Array<number> | number
+      type RequestOptions = RequestInit & {
+         retry?: number,
+         pause?: number | Array<number>,
+         timeout?: number,
+         simultaneous?: boolean
       }
+
+      function fetch(url: RequestInfo, options?: RequestOptions): Promise<Response> 
