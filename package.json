@@ -1,6 +1,6 @@
 {
   "name": "qlu-fetch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A fetch wrapper with retries",
   "type": "commonjs",
   "scripts": {
