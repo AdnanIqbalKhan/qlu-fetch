@@ -10,7 +10,7 @@ function fetch(url, options) {
     }
     const { retry = 3,
         pause = 1000,
-        timeout = 10000,
+        timeout = -1,
         simultaneous = false,
         ...opts } = options;
 
@@ -19,7 +19,7 @@ function fetch(url, options) {
         return Promise.race(arr)
     }
     let timeoutFunc
-    if (!opts.signal) {
+    if (!opts.signal && timeout !== -1) {
         const controller = new AbortController();
         timeoutFunc = setTimeout(() => {
             controller.abort();
