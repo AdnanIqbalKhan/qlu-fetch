@@ -1,10 +1,10 @@
 {
   "name": "qlu-fetch",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A fetch wrapper with retries",
   "type": "commonjs",
   "scripts": {
-    "clean": "rm -rf ./lib",
+    "clean": "rm ./lib/*.tgz",
     "build": "npm run clean && npm pack --pack-destination lib"
   },
   "repository": {

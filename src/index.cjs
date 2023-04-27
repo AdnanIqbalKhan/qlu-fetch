@@ -33,7 +33,7 @@ function fetch(url, options) {
             try {
                 const res = await nodeFetch(url, opts)
                 if (res.ok) {
-                    resolve(res.json())
+                    resolve(res)
                     clearTimeout(timeoutFunc)
                     return
                 }

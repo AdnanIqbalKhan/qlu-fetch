@@ -8,6 +8,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "qlu-fetch": "file:~/Desktop/Qlu/qlu-fetch/qlu-fetch-1.0.6.tgz"
+    "qlu-fetch": "file:~/Desktop/Qlu/qlu-fetch/lib/qlu-fetch-1.0.9.tgz"
   }
 }
