@@ -37,7 +37,7 @@ function fetch(url, options) {
                     clearTimeout(timeoutFunc)
                     return
                 }
-                throw new Error(`ERROR: ${res.status}`)
+                reject(res)
             } catch (error) {
                 if (i >= retry) {
                     reject(error)
